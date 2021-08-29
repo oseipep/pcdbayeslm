@@ -7,7 +7,7 @@
 #' @param noitems The number of items for the paired comparison.
 #' @param nocompars The number of comparisons among \code{noitems}.
 #' @param scores The true scores or merits of \code{noitems}.
-#' @param vars The constant variance of \code{scores}.
+#' @param vars The constant variance of \code{scores}; default is 1.
 #' @param data The data containing the comparison outcomes; defalut is NULL.
 #' @param datatype The type of data to analyze: "simulated" (the default) for simulated data,
 #' "real" for a given real dataset.
@@ -25,7 +25,7 @@
 #' ## compagraph(K,compars,scores,tvar,data=NULL)
 #' @export
 compagraph <-
-function(noitems,nocompars,scores,vars,data=NULL,datatype="simulated")
+function(noitems,nocompars,scores,vars=1,data=NULL,datatype="simulated")
 
 {
   # Simulated data is FALSE
