@@ -2,34 +2,31 @@
 % Please edit documentation in R/probRanks.R
 \name{probRanks}
 \alias{probRanks}
-\title{Ranks samples from Bayes linear models for paired comparison data}
+\title{Ranks samples from posterior distribution of
+Bayes linear models for paired comparison data}
 \usage{
 probRanks(samples, ascending = T)
 }
 \arguments{
-\item{samples}{The posterior draws obtained from \code{\link{bayeslm}}}
+\item{samples}{The posterior draws obtained from \code{\link{pcdbayeslm}} and 
+\code{\link{postdrawspcd}}}
 
 \item{ascending}{A logical variable default to True for ascending order of the 
 item labels.}
 }
 \value{
 Ranks permutations and ranking probabilities
+%% @note %% ~~further notes~~
 }
 \description{
-Ranks samples from Bayes linear models for paired comparison data
-}
-\note{
-%% ~~further notes~~
+Ranks samples from posterior distribution of
+Bayes linear models for paired comparison data
 }
 \examples{
 ## May be simulated data??
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \author{
 Prince P. Osei and Ori Davidov
+%% @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
+%% @references %% ~put references to the literature/web site here ~
 }

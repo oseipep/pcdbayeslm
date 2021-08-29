@@ -46,24 +46,18 @@ for reference prior}
 "real" for a given real dataset.}
 }
 \value{
-Posterior draws from \code{\link{bayeslm}}
+Posterior draws from \code{\link{pcdbayeslm}}
+%% @note %% ~~further notes~~
 }
 \description{
 Draws from the posterior distribution for Bayesian linear models for 
 paired comparison data
 }
-\note{
-%% ~~further notes~~
-}
 \examples{
-
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+## May be something from simulated data??
 }
 \author{
 Prince P. Osei and Ori Davidov
+%% @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
+%% @references %% ~put references to the literature/web site here ~
 }

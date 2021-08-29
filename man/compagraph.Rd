@@ -2,7 +2,7 @@
 % Please edit documentation in R/compagraph.R
 \name{compagraph}
 \alias{compagraph}
-\title{The paired comparison graph}
+\title{The cardinal paired comparison graph}
 \usage{
 compagraph(
   noitems,
@@ -29,16 +29,11 @@ compagraph(
 }
 \value{
 A comparison graph with samples on edges.
+%% @note %% ~~further notes~~
 }
 \description{
 This function build the paired comparison graph or use a given paired comparison
 outcomes to build the graph (G,S).
-}
-\details{
-%% ~~ If necessary, more details than the description above ~~
-}
-\note{
-%% ~~further notes~~
 }
 \examples{
 ## K = 3 # number of items
@@ -47,12 +42,8 @@ outcomes to build the graph (G,S).
 ## tvar <- 1
 ## compagraph(K,compars,scores,tvar,data=NULL)
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \author{
 Prince P. Osei and Ori Davidov
+%% @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
+%% @references %% ~put references to the literature/web site here ~
 }

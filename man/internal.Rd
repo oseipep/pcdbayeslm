@@ -1,7 +1,7 @@
 \name{internal}
 
 
-\alias{bayesrank}
+\alias{funcrank}
 
 \alias{zeros}
 

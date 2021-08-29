@@ -15,12 +15,10 @@ projbayeslm(noitems, xmu, xvar)
 }
 \value{
 Projected mean and variance matrix of the prior distribution.
+%% @note %% ~~further notes~~
 }
 \description{
 Projection of non-singular prior onto the subspace of the Laplacian
-}
-\note{
-%% ~~further notes~~
 }
 \examples{
 ## K = 6 # number of items
@@ -28,12 +26,8 @@ Projection of non-singular prior onto the subspace of the Laplacian
 ## xcov = diag(6) # the prior covariance matrix
 ## projbayeslm(K,mu,xcov)
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \author{
 Prince P. Osei and Ori Davidov
+%% @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
+%% @references %% ~put references to the literature/web site here ~
 }
