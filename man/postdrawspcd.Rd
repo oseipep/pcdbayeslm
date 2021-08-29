@@ -9,15 +9,15 @@ postdrawspcd(
   noitems,
   nocompars,
   scores,
-  vars,
-  xmu,
-  xvar,
-  a0,
-  b0,
-  Edges,
-  data,
-  datatype,
-  prior = c("conju", "flat", "ref")
+  vars = 1,
+  xmu = zeros(noitems, 1),
+  xvar = vars * diag(noitems),
+  a0 = 2,
+  b0 = 1,
+  Edges = c(1, 2, 1, 3, 2, 3),
+  data = NULL,
+  datatype = "simulated",
+  prior = "conju"
 )
 }
 \arguments{
@@ -29,17 +29,20 @@ postdrawspcd(
 
 \item{scores}{The true scores or merits of \code{noitems}}
 
-\item{vars}{The constant variance of \code{scores}.}
+\item{vars}{The constant variance of \code{scores} default is 1.}
 
-\item{xmu}{The normal prior mean of \code{noitems}.}
+\item{xmu}{The normal prior mean of \code{noitems} default is a vector of zeros of length
+\code{noitems}.}
 
-\item{xvar}{The prior covariance matrix of \code{noitems}.}
+\item{xvar}{The prior covariance matrix of \code{noitems} default is \code{vars} times 
+the identity matrix dimension \code{noitems}.}
 
-\item{a0}{The prior shape of inverse gamma distribution.}
+\item{a0}{The prior shape of inverse gamma distribution default is 2}
 
-\item{b0}{The prior scale of inverse gamma distribution.}
+\item{b0}{The prior scale of inverse gamma distribution default is 1}
 
-\item{Edges}{The edge set of \code{noitems} in the graph.}
+\item{Edges}{The edge set of \code{noitems} in the graph default is complete graph of 
+three \code{noitems}.}
 
 \item{data}{The data containing the comparison outcomes; defalut is NULL.}
 
@@ -50,7 +53,7 @@ postdrawspcd(
 "semi-conju" for semi-conjugate prior, "flat" for flat prior, and "ref" for reference prior}
 }
 \value{
-A posterior rankings of posterior draws from \code{\link{pcdbayeslm}}
+A posterior rankings of posterior draws from \code{\link{cpcbayeslm}}
 %% @note %% ~~further notes~~
 }
 \description{
@@ -59,7 +62,13 @@ paper by Prince P. Osei and Ori David (2021) to account for the uncertainty
 in the ranking of items.
 }
 \examples{
-## May be a simulated dataset??
+##  A graph of three items
+##  K <- 3 # number of items
+## edges <- c(1,2,1,3,2,3) # edge set
+## compars <- rep(3,3) # pairwise comparisons
+##  Tscores <- 1:3-mean(1:3) # The true score sum to zero
+##  N <- 100 # number of samples to draw
+## postdrawspcd(N,K,compars,Tscores,Edges=edges)
 }
 \author{
 Prince P. Osei and Ori Davidov

@@ -7,34 +7,36 @@ paired comparison data}
 \usage{
 bayeslmsamples(
   iter,
-  Kitems,
-  Kcompars,
-  Kscore,
-  Kvars,
-  Kmuprior,
-  Kvarprior,
-  Kedges,
-  prior,
-  data,
-  type
+  noitems,
+  nocompars,
+  scores,
+  vars = 1,
+  muprior = zeros(noitems, 1),
+  varprior = vars * diag(noitems),
+  Edges,
+  prior = "conju",
+  data = NULL,
+  type = "simulated"
 )
 }
 \arguments{
 \item{iter}{The number of posterior draws.}
 
-\item{Kitems}{The number of items for the paired comparison.}
+\item{noitems}{The number of items for the paired comparison.}
 
-\item{Kcompars}{A vector of pairwise comparisons among \code{Kitems}.}
+\item{nocompars}{A vector of pairwise comparisons among \code{noitems}.}
 
-\item{Kscore}{The true scores or merits of \code{Kitems}}
+\item{scores}{The true scores or merits of \code{noitems}}
 
-\item{Kvars}{The true constant variance of \code{Kscore}.}
+\item{vars}{The true constant variance of \code{scores}; default is 1.}
 
-\item{Kmuprior}{The normal prior mean for \code{Kitems}.}
+\item{muprior}{The normal prior mean for \code{noitems}; default is a vector of 
+zeros of length \code{noitems}.}
 
-\item{Kvarprior}{The prior covariance matrix of \code{Kitems}.}
+\item{varprior}{The prior covariance matrix of \code{noitems}; default is the 
+identity matrix of dimension \code{noitems}.}
 
-\item{Kedges}{The edge set of \code{Kitems} in the graph.}
+\item{Edges}{The edge set of \code{noitems} in the graph.}
 
 \item{prior}{The type of prior: "conju" (default) for conjugate prior, 
 "semi-conju" for semi-conjugate prior, "flat" for flat prior, and "ref" 
@@ -46,7 +48,7 @@ for reference prior}
 "real" for a given real dataset.}
 }
 \value{
-Posterior draws from \code{\link{pcdbayeslm}}
+Posterior draws from \code{\link{cpcbayeslm}}
 %% @note %% ~~further notes~~
 }
 \description{

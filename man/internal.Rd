@@ -11,11 +11,11 @@
 
 \alias{vedges}
 
-\alias{pathGraph}
+\alias{pathgraph}
 
 \alias{edgescompars}
 
-\alias{Incompletegraph}
+\alias{incompletegraph}
 
 
 %- Also NEED an '\alias' for EACH other topic documented here.

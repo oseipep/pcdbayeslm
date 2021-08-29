@@ -8,7 +8,7 @@ compagraph(
   noitems,
   nocompars,
   scores,
-  vars,
+  vars = 1,
   data = NULL,
   datatype = "simulated"
 )
@@ -20,7 +20,7 @@ compagraph(
 
 \item{scores}{The true scores or merits of \code{noitems}.}
 
-\item{vars}{The constant variance of \code{scores}.}
+\item{vars}{The constant variance of \code{scores}; default is 1.}
 
 \item{data}{The data containing the comparison outcomes; defalut is NULL.}
 
