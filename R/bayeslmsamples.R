@@ -15,25 +15,25 @@
 #' @param data he data containing the comparison outcomes; defalut is NULL.
 #' @param type The type of data to analyze: "simulated" (the default) for simulated data,
 #' "real" for a given real dataset.
-#' @return Posterior draws from \code{\link{bayeslm}}
-#' @note %% ~~further notes~~
+#' @return Posterior draws from \code{\link{pcdbayeslm}}
+#' %% @note %% ~~further notes~~
 #' @author Prince P. Osei and Ori Davidov
-#' @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
-#' @references %% ~put references to the literature/web site here ~
+#' %% @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
+#' %% @references %% ~put references to the literature/web site here ~
 #' @importFrom invgamma rinvgamma
 #' @examples
-#' 
+#' ## May be something from simulated data??
 #' @export
 bayeslmsamples <-
 function(iter,Kitems,Kcompars,Kscore,Kvars,Kmuprior,Kvarprior,Kedges,prior,data,type)
 {
   # initialize
-  tmp <- bayeslm(noitems=Kitems,nocompars=Kcompars,scores=Kscore,vars=Kvars,
+  tmp <- pcdbayeslm(noitems=Kitems,nocompars=Kcompars,scores=Kscore,vars=Kvars,
                   xmu=Kmuprior,xvar=Kvarprior,Edges=Kedges,prior=prior,
                   data,datatype=type)
   psamples <- rbind(c(tmp$Bayes$meanP))
   for (ii in 2:iter) {
-    tmp <- bayeslm(noitems=Kitems,nocompars=Kcompars,scores=Kscore,vars=Kvars,
+    tmp <- pcdbayeslm(noitems=Kitems,nocompars=Kcompars,scores=Kscore,vars=Kvars,
                     xmu=Kmuprior,xvar=Kvarprior,Edges=Kedges,prior=prior,
                     data,datatype=type)
     psamples <- rbind(psamples,c(tmp$Bayes$meanP))

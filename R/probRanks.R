@@ -1,13 +1,15 @@
-#' Ranks samples from Bayes linear models for paired comparison data
+#' Ranks samples from posterior distribution of
+#' Bayes linear models for paired comparison data
 #' 
-#' @param samples The posterior draws obtained from \code{\link{bayeslm}}
+#' @param samples The posterior draws obtained from \code{\link{pcdbayeslm}} and 
+#' \code{\link{postdrawspcd}}
 #' @param ascending A logical variable default to True for ascending order of the 
 #' item labels.
 #' @return Ranks permutations and ranking probabilities
-#' @note %% ~~further notes~~
+#' %% @note %% ~~further notes~~
 #' @author Prince P. Osei and Ori Davidov
-#' @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
-#' @references %% ~put references to the literature/web site here ~
+#' %% @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
+#' %% @references %% ~put references to the literature/web site here ~
 #' @importFrom plyr ddply
 #' @examples
 #' ## May be simulated data??
@@ -20,7 +22,7 @@ function(samples,ascending=T)
   # Merits labels:
   mlabels <- meritlabels(K,ascending = ascending)
   # Create a dataframe
-  rank.ds <- as.data.frame(t(apply(samples,1, bayesrank)))
+  rank.ds <- as.data.frame(t(apply(samples,1, funcrank)))
   colnames(rank.ds) <- mlabels
   ranks <- ddply(rank.ds,.variables=mlabels,nrow)
   colnames(ranks)[K+1] <- "freq"

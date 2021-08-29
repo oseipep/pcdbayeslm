@@ -1,9 +1,8 @@
-#' The paired comparison graph
+#' The cardinal paired comparison graph
 #' 
 #' This function build the paired comparison graph or use a given paired comparison
 #' outcomes to build the graph (G,S).
 #' 
-#' %% ~~ If necessary, more details than the description above ~~
 #' 
 #' @param noitems The number of items for the paired comparison.
 #' @param nocompars The number of comparisons among \code{noitems}.
@@ -13,10 +12,10 @@
 #' @param datatype The type of data to analyze: "simulated" (the default) for simulated data,
 #' "real" for a given real dataset.
 #' @return A comparison graph with samples on edges.
-#' @note %% ~~further notes~~
+#' %% @note %% ~~further notes~~
 #' @author Prince P. Osei and Ori Davidov
-#' @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
-#' @references %% ~put references to the literature/web site here ~
+#' %% @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
+#' %% @references %% ~put references to the literature/web site here ~
 #' @importFrom  stats rnorm
 #' @examples
 #' ## K = 3 # number of items
