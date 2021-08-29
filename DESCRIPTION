@@ -1,4 +1,4 @@
-Package: pcdbayeslm
+Package: cpcbayeslm
 Type: Package
 Title: Bayesian analysis of paired comparison data
 Version: 0.1
