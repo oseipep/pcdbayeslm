@@ -59,5 +59,11 @@ function(N,noitems, nocompars,scores,vars=1,xmu=zeros(noitems,1),xvar=vars*diag(
     if(prior == "flat"){
       ds.sample <- rmvnorm(N,mean=pmean,sigma=pcovar)
     }
-    return(ds.sample)
+    res <- list(drawspost=ds.sample)
+    res$meanpost <- pmean
+    res$covarpost <- pcovar
+    res$shapepost <- pshape
+    res$scalepost <- pscale
+    class(res) <- "cpcbayeslm"
+    res
   }

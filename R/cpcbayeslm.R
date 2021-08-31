@@ -22,7 +22,7 @@
 #' @param prior The type of prior: "conju" (default) for conjugate prior, 
 #' "semi-conju" for semi-conjugate prior, "flat" for flat prior, and "ref" for reference prior
 #' @param tol The tolerance value to control near zero eigen values; default is 1e-08.
-#' @return The posterior mean, variance and posterior shape and scale of normal inverse
+#' @return The Bayes estimators and least squares estimates.
 #' gamma distribution.
 #' %% @note %% ~~further notes~~
 #' @author Prince P. Osei and Ori Davidov
@@ -32,7 +32,10 @@
 #' @importFrom MASS ginv
 #' @importFrom stats var
 #' @examples
-#' ## maybe something with simulated data...
+#' ## K = 3 # number of items
+#' ## paircompars <- rep(3,3) # number of pairwise comparisons
+#' ## Tscores <- 3:1-mean(3:1) # true scores 
+#' ## cpcbayeslm(K,paircompars,Tscores)
 #' @export
 cpcbayeslm <-
 function(noitems,nocompars,scores,vars=1,xmu=zeros(noitems,1),xvar=vars*diag(noitems),

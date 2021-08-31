@@ -10,7 +10,8 @@
 #' zeros of length \code{noitems}.
 #' @param varprior The prior covariance matrix of \code{noitems}; default is the 
 #' identity matrix of dimension \code{noitems}.
-#' @param Edges The edge set of \code{noitems} in the graph.
+#' @param Edges The edge set of \code{noitems} in the graph, default is the edgeset of 
+#' complete graph of three items.
 #' @param prior The type of prior: "conju" (default) for conjugate prior, 
 #' "semi-conju" for semi-conjugate prior, "flat" for flat prior, and "ref" 
 #' for reference prior
@@ -24,11 +25,17 @@
 #' %% @references %% ~put references to the literature/web site here ~
 #' @importFrom invgamma rinvgamma
 #' @examples
-#' ## May be something from simulated data??
+#' ##  A graph of three items
+#' ##  K <- 3 # number of items
+#' ## Kedges <- c(1,2,1,3,2,3) # edge set
+#' ## compars <- rep(3,3) # pairwise comparisons
+#' ##  Tscores <- 1:3-mean(1:3) # The true score sum to zero
+#' ## bayeslmsamples(100,K,compars,Tscores,Edges=Kedges)
 #' @export
 bayeslmsamples <-
 function(iter,noitems,nocompars,scores,vars=1,muprior=zeros(noitems,1),
-         varprior=vars*diag(noitems),Edges,prior="conju",data=NULL,type="simulated")
+         varprior=vars*diag(noitems),Edges=c(1,2,1,3,2,3),prior="conju",
+         data=NULL,type="simulated")
 {
   # initialize
   tmp <- cpcbayeslm(noitems=noitems,nocompars=nocompars,scores=scores,vars=vars,
