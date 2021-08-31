@@ -23,7 +23,14 @@ Ranks samples from posterior distribution of
 Bayes linear models for paired comparison data
 }
 \examples{
-## May be simulated data??
+##  A graph of three items
+##  K <- 3 # number of items
+## edges <- c(1,2,1,3,2,3) # edge set
+## compars <- rep(3,3) # pairwise comparisons
+##  Tscores <- 1:3-mean(1:3) # The true score sum to zero
+##  N <- 100 # number of samples to draw
+## hh <- postdrawspcd(N,K,compars,Tscores,Edges=edges) # posterior draws
+## probranks(hh$drawspost)
 }
 \author{
 Prince P. Osei and Ori Davidov

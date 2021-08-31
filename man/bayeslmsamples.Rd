@@ -13,7 +13,7 @@ bayeslmsamples(
   vars = 1,
   muprior = zeros(noitems, 1),
   varprior = vars * diag(noitems),
-  Edges,
+  Edges = c(1, 2, 1, 3, 2, 3),
   prior = "conju",
   data = NULL,
   type = "simulated"
@@ -36,7 +36,8 @@ zeros of length \code{noitems}.}
 \item{varprior}{The prior covariance matrix of \code{noitems}; default is the 
 identity matrix of dimension \code{noitems}.}
 
-\item{Edges}{The edge set of \code{noitems} in the graph.}
+\item{Edges}{The edge set of \code{noitems} in the graph, default is the edgeset of 
+complete graph of three items.}
 
 \item{prior}{The type of prior: "conju" (default) for conjugate prior, 
 "semi-conju" for semi-conjugate prior, "flat" for flat prior, and "ref" 
@@ -56,7 +57,12 @@ Draws from the posterior distribution for Bayesian linear models for
 paired comparison data
 }
 \examples{
-## May be something from simulated data??
+##  A graph of three items
+##  K <- 3 # number of items
+## Kedges <- c(1,2,1,3,2,3) # edge set
+## compars <- rep(3,3) # pairwise comparisons
+##  Tscores <- 1:3-mean(1:3) # The true score sum to zero
+## bayeslmsamples(100,K,compars,Tscores,Edges=Kedges)
 }
 \author{
 Prince P. Osei and Ori Davidov
