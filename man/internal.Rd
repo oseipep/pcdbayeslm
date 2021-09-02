@@ -17,6 +17,10 @@
 
 \alias{incompletegraph}
 
+\alias{postranksfreq}
+
+\alias{postprobsucra}
+
 
 %- Also NEED an '\alias' for EACH other topic documented here.
 
