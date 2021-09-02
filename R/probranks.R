@@ -44,6 +44,6 @@ function(samples,ascending=T)
     }
   }
   rownames(prob.rankmat) <- mlabels
-  res <- list(RankPermutations=ranks,ProbRanks=prob.rankmat)
+  res <- list(RankPermutations=ranks,ProbRanks=prob.rankmat,IndisampleRanks=rank.ds)
   return(res)
 }
