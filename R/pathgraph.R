@@ -1,4 +1,4 @@
-#' @export
+#' @keywords internal
 pathgraph <-
 function(noitems)
 {

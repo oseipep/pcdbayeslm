@@ -1,4 +1,4 @@
-#' @export
+#' @keywords internal
 funcrank <-
 function(x)
 {

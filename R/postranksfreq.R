@@ -1,5 +1,5 @@
 #' @importFrom gtools combinations permutations
-#' @export
+#' @keywords internal
 postranksfreq <- 
   function(postdraws,n=3,v=1:n)
     {

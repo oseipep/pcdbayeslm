@@ -1,4 +1,4 @@
-#' @export
+#' @keywords internal
 edgescompars <-
 function(noitems,m=1,topology="balanced")
 {

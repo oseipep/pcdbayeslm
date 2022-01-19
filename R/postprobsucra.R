@@ -1,7 +1,7 @@
 #' @importFrom ggplot2 ggplot geom_bar theme ggtitle xlab ylab aes element_text
 #' @importFrom forcats fct_reorder
 #' @importFrom graphics par legend
-#' @export
+#' @keywords internal
 postprobsucra <- 
   function(x,lower.is.better=FALSE,plot=TRUE)
   {
@@ -57,11 +57,3 @@ postprobsucra <-
 }
 
 
-add_legend<-function(...) 
-{
-  opar<-par(fig=c(0, 1, 0, 1),oma=c(0, 0, 0, 0),
-            mar=c(0, 0, 0, 0),new=TRUE)    
-  on.exit(par(opar))
-  plot(0, 0, type='n', bty='n', xaxt='n', yaxt='n')
-  legend(...)
-}

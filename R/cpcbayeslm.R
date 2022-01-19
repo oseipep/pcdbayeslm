@@ -22,20 +22,19 @@
 #' @param prior The type of prior: "conju" (default) for conjugate prior, 
 #' "semi-conju" for semi-conjugate prior, "flat" for flat prior, and "ref" for reference prior
 #' @param tol The tolerance value to control near zero eigen values; default is 1e-08.
-#' @return The Bayes estimators and least squares estimates.
-#' gamma distribution.
+#' @return The Bayesian posterior mean and variance together with the least squares estimates.
 #' %% @note %% ~~further notes~~
 #' @author Prince P. Osei and Ori Davidov
 #' %% @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
-#' %% @references %% ~put references to the literature/web site here ~
+#' @references Osei, P. P. and Davidov, O. (2022). Bayesian linear models for cardinal paired comparison data. Under revision.
 #' @importFrom igraph graph laplacian_matrix
 #' @importFrom MASS ginv
 #' @importFrom stats var
 #' @examples
-#' ## K = 3 # number of items
-#' ## paircompars <- rep(3,3) # number of pairwise comparisons
-#' ## Tscores <- 3:1-mean(3:1) # true scores 
-#' ## cpcbayeslm(K,paircompars,Tscores)
+#' K = 3 # number of items
+#' paircompars <- rep(3,3) # number of pairwise comparisons
+#' Tscores <- 3:1-mean(3:1) # true scores 
+#' cpcbayeslm(K,paircompars,Tscores)
 #' @export
 cpcbayeslm <-
 function(noitems,nocompars,scores,vars=1,xmu=zeros(noitems,1),xvar=vars*diag(noitems),

@@ -1,4 +1,4 @@
-#' @export
+#' @keywords internal
 zeros <-
 function(nx = 1, ny = nx){
   

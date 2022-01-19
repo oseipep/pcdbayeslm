@@ -1,4 +1,4 @@
-#' @export
+#' @keywords internal
 ones <-
 function(nx = 1, ny = nx){
   

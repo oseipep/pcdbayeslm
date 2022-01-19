@@ -1,5 +1,5 @@
 #' @importFrom  igraph graph delete_edges E gsize ecount is_connected
-#' @export
+#' @keywords internal
 incompletegraph <-
 function(noitems,L=2,M=1)
 {
