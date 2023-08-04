@@ -26,7 +26,7 @@
 #' %% @note %% ~~further notes~~
 #' @author Prince P. Osei and Ori Davidov
 #' %% @seealso %% ~~objects to See Also as \code{\link{help}}, ~~~
-#' @references Osei, P. P. and Davidov, O. (2022). Bayesian linear models for cardinal paired comparison data. Under revision.
+#' @references Osei, P. P. and Davidov, O. (2022). Bayesian linear models for cardinal paired comparison data. Comp. Stat and Data Analysis Vol 172, 107481.
 #' @importFrom igraph graph laplacian_matrix
 #' @importFrom MASS ginv
 #' @importFrom stats var
