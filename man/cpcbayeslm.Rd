@@ -23,7 +23,7 @@ cpcbayeslm(
 \arguments{
 \item{noitems}{The number of items for the paired comparison.}
 
-\item{nocompars}{The number of comparisons among \code{noitems}.}
+\item{nocompars}{A vector of the number of pairwise comparisons among \code{noitems}.}
 
 \item{scores}{The true scores or merits of \code{noitems}}
 
