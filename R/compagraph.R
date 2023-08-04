@@ -5,7 +5,7 @@
 #' 
 #' 
 #' @param noitems The number of items for the paired comparison.
-#' @param nocompars The number of comparisons among \code{noitems}.
+#' @param nocompars A vector of the number of pairwise comparisons among \code{noitems}.
 #' @param scores The true scores or merits of \code{noitems}.
 #' @param vars The constant variance of \code{scores}; default is 1.
 #' @param data The data containing the comparison outcomes; defalut is NULL.
