@@ -1,14 +1,14 @@
 Package: cpcbayeslm
 Type: Package
 Title: Bayesian analysis of paired comparison data
-Version: 0.2
-Date: 2022-01-19
+Version: 0.3
+Date: 2023-08-04
 Author: Prince P. Osei and Ori Davidov
 Maintainer: Prince P. Osei <posei@campus.haifa.ac.il>
 Imports: igraph, MASS, stats, mvtnorm, invgamma, plyr, ggplot2, gtools, forcats
 Description: Bayesian analysis of cardinal paired comparison data in a restricted parameter space. It provides a general automatic approach in specifying singular normal priors in these subspaces.
 License: GPL(>=2)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Encoding: UTF-8
 Depends: 
     R (>= 2.10)
