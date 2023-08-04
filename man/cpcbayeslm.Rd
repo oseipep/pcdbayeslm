@@ -68,7 +68,7 @@ Tscores <- 3:1-mean(3:1) # true scores
 cpcbayeslm(K,paircompars,Tscores)
 }
 \references{
-Osei, P. P. and Davidov, O. (2022). Bayesian linear models for cardinal paired comparison data. Under revision.
+Osei, P. P. and Davidov, O. (2022). Bayesian linear models for cardinal paired comparison data. Comp. Stat and Data Analysis Vol 172, 107481.
 }
 \author{
 Prince P. Osei and Ori Davidov
