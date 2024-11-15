@@ -8,7 +8,7 @@ Maintainer: Prince P. Osei <posei@campus.haifa.ac.il>
 Imports: igraph, MASS, stats, mvtnorm, invgamma, plyr, ggplot2, gtools, forcats
 Description: Bayesian analysis of cardinal paired comparison data in a restricted parameter space. It provides a general automatic approach in specifying singular normal priors in these subspaces.
 License: GPL(>=2)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Encoding: UTF-8
 Depends: 
     R (>= 2.10)

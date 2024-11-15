@@ -14,9 +14,9 @@ bayeslmsamples(
   muprior = zeros(noitems, 1),
   varprior = vars * diag(noitems),
   Edges = c(1, 2, 1, 3, 2, 3),
-  prior = "conju",
+  prior = c("conju", "semi-conju", "flat", "ref"),
   data = NULL,
-  type = "simulated"
+  datatype = c("simulated", "real")
 )
 }
 \arguments{
@@ -43,9 +43,9 @@ complete graph of three items.}
 "semi-conju" for semi-conjugate prior, "flat" for flat prior, and "ref" 
 for reference prior}
 
-\item{data}{he data containing the comparison outcomes; defalut is NULL.}
+\item{data}{The data containing the comparison outcomes; default is NULL.}
 
-\item{type}{The type of data to analyze: "simulated" (the default) for simulated data,
+\item{datatype}{The type of data to analyze: "simulated" (the default) for simulated data,
 "real" for a given real dataset.}
 }
 \value{
@@ -62,7 +62,7 @@ paired comparison data
 ## Kedges <- c(1,2,1,3,2,3) # edge set
 ## compars <- rep(3,3) # pairwise comparisons
 ##  Tscores <- 1:3-mean(1:3) # The true score sum to zero
-## bayeslmsamples(100,K,compars,Tscores,Edges=Kedges)
+## bayeslmsamples(100,K,compars,Tscores,Edges=Kedges, prior="conju", datatype="simulated")
 }
 \author{
 Prince P. Osei and Ori Davidov

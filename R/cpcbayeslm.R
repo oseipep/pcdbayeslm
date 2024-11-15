@@ -34,12 +34,14 @@
 #' K = 3 # number of items
 #' paircompars <- rep(3,3) # number of pairwise comparisons
 #' Tscores <- 3:1-mean(3:1) # true scores 
-#' cpcbayeslm(K,paircompars,Tscores)
+#' cpcbayeslm(K,paircompars,Tscores, datatype = "simulated", prior = "conju")
 #' @export
 cpcbayeslm <-
 function(noitems,nocompars,scores,vars=1,xmu=zeros(noitems,1),xvar=vars*diag(noitems),
-           a0=2,b0=1,Edges=c(1,2,1,3,2,3),data=NULL,datatype="simulated",
-           prior="conju",tol=1e-08)
+         a0=2,b0=1,Edges=c(1,2,1,3,2,3),data=NULL,
+         datatype=c("simulated", "real"),
+         prior=c("conju", "semi-conju", "flat", "ref"),
+         tol=1e-08)
 {
   # create the simple graph and its Laplacian
   gh <- graph(Edges,n=noitems,directed = FALSE)
